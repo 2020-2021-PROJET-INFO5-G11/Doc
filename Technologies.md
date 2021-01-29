@@ -19,4 +19,5 @@ https://fr.flossmanuals.net/creer-un-site-web-en-python/introduction/
 
 ## Frontend
 
-### Vue JS :
+### Vue JS : 
+https://vuejs.org/v2/guide/
