@@ -4,7 +4,7 @@ EL JRAIDI Rim, VERNET Maxime, SAJIDE Idriss, MANISSADJIAN Gabriel
 ## Pre-study
   ### Roles attributions
   - Rim : Product Owner + Backend + Integration tests
-  - Maxime : Frontend + Scrum Master
+  - Maxime : Scrum Master + Frontend
   - Idriss : Frontend
   - Gabriel : Backend
 
