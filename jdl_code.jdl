@@ -1,0 +1,88 @@
+//ENTITIES
+entity User {
+    Username String required minlength(3) maxlength(20) 
+    Password String required pattern(/^(?=.{10,}$)(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.\W).*$/) 
+    FirstName String required minlength(2) maxlength(30) 
+    LastName String required minlength(2) maxlength(30) 
+	EMail String required pattern(/^[^@\s]+@[^@\s]+.[^@\s]+$/)
+    Photo ImageBlob
+    BirthDate Date required 
+    City String required
+    Preferences TypeOfActivity
+    Gender Genders
+    Bio String maxlength(500)
+    ActivitiesInComing Activity
+    ActivitiesDone Activity
+	ActivitiesOrganized Activity
+    Role Roles required
+}
+
+entity Activity{
+	ID Integer required
+	Name String required minlength(3) maxlength(50)
+    Location String required minlength(3) maxlength(50)
+    Date Date required
+    Hour Instant required
+    Duration Duration
+    MeetingPoint String maxlength(100)
+    CapacityMin Integer
+    CapacityMax Integer
+    Private Boolean required //default false
+    Group Group
+    Type TypeOfActivity required
+    Photo ImageBlob
+    Registered User // list
+    NbRegistered Integer required //default 0
+    Organizers User // list
+    Description String maxlength(1024)
+    Limit Date
+    Comments Comment
+}
+
+entity Group{
+	ID Integer required
+    Name String required maxlength(30)
+	Users User
+    Creator User
+    Activities Activity
+    Description String
+}
+
+entity Comment{
+	Username String required
+    Content String maxlength(255)
+    Date Instant
+    Answers Comment
+}
+
+enum TypeOfActivity {
+	Sport,
+    Cinema,
+    Soiree,
+    Culture,
+    Autre
+}
+
+enum Roles {
+	Auncun,
+    Certifie,
+    Moderateur,
+    Admin
+}
+
+enum Genders {
+	Homme,
+    Femme,
+    Autre
+}
+
+//RELATIONSHIPS
+relationship OneToMany {
+	Group{activities} to Activity
+    Activity{comments} to Comment
+}
+
+relationship ManyToMany {
+    Group{users} to User
+	Activity{users} to User
+}
