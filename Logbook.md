@@ -64,7 +64,7 @@ EL JRAIDI Rim, VERNET Maxime, SAJIDE Idriss, MANISSADJIAN Gabriel
   #### Creation of user stories
   - Creation of 5 user stories covering as much functionality as possible.
   
-  ### Creation of a JDL diagram
+  #### Creation of a JDL diagram
   - Creation of a JDL diagram to determine our entities.
   
   ### Creation of an abstract HMI
