@@ -67,5 +67,5 @@ EL JRAIDI Rim, VERNET Maxime, SAJIDE Idriss, MANISSADJIAN Gabriel
   #### Creation of a JDL diagram
   - Creation of a JDL diagram to determine our entities.
   
-  ### Creation of an abstract HMI
+  #### Creation of an abstract HMI
   - Creation of an abstract HMI of our app
