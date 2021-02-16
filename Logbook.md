@@ -57,7 +57,7 @@ EL JRAIDI Rim, VERNET Maxime, SAJIDE Idriss, MANISSADJIAN Gabriel
   - First version of our Database with one entity : first version of user
   
   
-## Sprint 1
+## Design
 
   ### 11/02/2021
   
